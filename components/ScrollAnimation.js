@@ -1,4 +1,4 @@
-import { useScroll, motion, useSpring, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import React from "react";
 
 const ScrollAnimations = () => {

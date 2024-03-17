@@ -1,5 +1,5 @@
+import { useAnimationControls } from "framer-motion";
 import React from "react";
-import { motion, useAnimationControls } from "framer-motion";
 
 const AnimationControls = () => {
   const controls = useAnimationControls();
@@ -20,23 +20,6 @@ const AnimationControls = () => {
       <button onClick={handleClick} className="example-button">
         Flip it!
       </button>
-      <motion.div
-        style={{
-          width: 150,
-          height: 150,
-          background: "black",
-        }}
-        variants={{
-          initial: {
-            rotate: "0deg",
-          },
-          flip: {
-            rotate: "360deg",
-          },
-        }}
-        initial="initial"
-        animate={controls}
-      ></motion.div>
     </div>
   );
 };
