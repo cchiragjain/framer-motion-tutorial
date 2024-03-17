@@ -4,30 +4,31 @@ import React from "react";
 const ScrollAnimations = () => {
   const { scrollYProgress } = useScroll();
 
-  const scaleX = useSpring(scrollYProgress);
+  // Creates a MotionValue that, when set, will use a spring animation to animate to its new state.
+  const scaleXSpringy = useSpring(scrollYProgress);
 
+  // Create a MotionValue that transforms the output of another MotionValue by mapping it from one range of values into another.
   const background = useTransform(
     scrollYProgress,
     [0, 1],
-    ["rgb(86, 1, 245)", "rgb(1, 245, 13)"]
+    ["rgb(86,1,245)", "rgb(1,245,13)"]
   );
 
   return (
     <div>
       <motion.div
         style={{
-          // scaleX: scrollYProgress,
-          scaleX,
-          transformOrigin: "left",
+          // scaleX : scrollYProgress, // define the x scale based on the position that the user is in while scrolling kind of like how in blogs there is a top loader which shows progress
+          scaleX: scaleXSpringy,
+          transformOrigin: "left", // the element will be defined from left to right
           // background: "blue",
           background,
           position: "sticky",
           top: 0,
-          width: "100%",
-          height: "20px",
+          widows: "100%",
+          height: "5px",
         }}
       />
-
       <div
         style={{
           maxWidth: "700px",
