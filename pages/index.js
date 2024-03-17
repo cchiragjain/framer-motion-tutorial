@@ -1,12 +1,12 @@
-import AnimationControls from "../components/AnimationControls";
+import ViewBasedAnimations from "../components/ViewBaseAnimaions";
 
 export default function Home() {
   return (
     <div>
       {/* <BasicsOfMotion /> */}
       {/* <Gestures /> */}
-      <AnimationControls />
-      {/* <ViewBasedAnimations /> */}
+      {/* <AnimationControls /> */}
+      <ViewBasedAnimations />
       {/* <ScrollAnimations /> */}
     </div>
   );
